@@ -21,6 +21,7 @@ public class UserEntity extends BaseEntity{
     private String password; // 비밀번호
 
     @Column(name = "role")
+    @Enumerated(EnumType.STRING)
     private Role role; // 일반 유저와 관리자 계정 구분
 
 }
