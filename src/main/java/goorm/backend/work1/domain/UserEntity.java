@@ -12,7 +12,7 @@ import lombok.*;
 public class UserEntity extends BaseEntity{
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private int id; // 자동 생성 pk
+    private Long id; // 자동 생성 pk
 
     @Column(name = "username")
     private String username; // 아이디
