@@ -4,6 +4,7 @@ import goorm.backend.work1.code.SuccessCode;
 import goorm.backend.work1.dto.response.ResponseDTO;
 import goorm.backend.work1.dto.user.SignUpDTO;
 import goorm.backend.work1.service.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/signup")
-    public ResponseEntity<ResponseDTO> registerUser(@RequestBody SignUpDTO signUpDTO) {
+    public ResponseEntity<ResponseDTO> registerUser(@Valid @RequestBody SignUpDTO signUpDTO) {
         SignUpDTO.Res res = userService.signUp(signUpDTO);
         return ResponseEntity
                 .status(SuccessCode.SUCCESS_REGISTER.getStatus().value())
