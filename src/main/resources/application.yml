@@ -9,7 +9,6 @@ spring:
     username: work1_user
     password: work1_user1234
 
-
   # JPA ??
   jpa:
     hibernate:
@@ -20,7 +19,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-
 
   # JWT secret ?
   jwt:
